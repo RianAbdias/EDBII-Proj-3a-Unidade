@@ -26,9 +26,7 @@ void pausar() {
     limparBuffer();
 }
 
-// ============================================
 // CRUD ALUNOS
-// ============================================
 
 void cadastrarAluno() {
     string nome;
@@ -118,9 +116,7 @@ void removerAluno() {
     }
 }
 
-// ============================================
 // CRUD EXERCÍCIOS
-// ============================================
 
 void cadastrarExercicio() {
     int tipo;
@@ -230,9 +226,7 @@ void removerExercicio() {
     }
 }
 
-// ============================================
 // CRUD FICHAS
-// ============================================
 
 void criarFicha() {
     string nome;
@@ -356,9 +350,7 @@ void removerFicha() {
     }
 }
 
-// ============================================
 // ASSOCIAÇÕES
-// ============================================
 
 void associarFichaAluno() {
     int idAluno, idFicha;
@@ -410,36 +402,33 @@ void removerFichaAluno() {
     }
 }
 
-// ============================================
 // MENU PRINCIPAL
-// ============================================
 
 void mostrarMenuPrincipal() {
-    cout << "\n╔══════════════════════════════════════╗\n";
-    cout << "║      SISTEMA DE ACADEMIA - MENU      ║\n";
-    cout << "╠══════════════════════════════════════╣\n";
-    cout << "║  1. Gerenciar Alunos                 ║\n";
-    cout << "║  2. Gerenciar Exercícios            ║\n";
-    cout << "║  3. Gerenciar Fichas                ║\n";
-    cout << "║  4. Associações (Aluno-Ficha)       ║\n";
-    cout << "║  5. Relatórios                      ║\n";
-    cout << "║  0. Sair                            ║\n";
-    cout << "╚══════════════════════════════════════╝\n";
+    cout << "\n======================================\n";
+    cout << "|      SISTEMA DE ACADEMIA - MENU      |\n";
+    cout << "|======================================|\n";
+    cout << "|  1. Gerenciar Alunos                 |\n";
+    cout << "|  2. Gerenciar Exercícios             |\n";
+    cout << "|  3. Gerenciar Fichas                 |\n";
+    cout << "|  4. Associações (Aluno-Ficha)        |\n";
+    cout << "|  0. Sair                             |\n";
+    cout << "========================================\n";
     cout << "Escolha uma opção: ";
 }
 
 void menuAlunos() {
     int opcao;
     do {
-        cout << "\n╔══════════════════════════════════════╗\n";
-        cout << "║         GERENCIAR ALUNOS             ║\n";
-        cout << "╠══════════════════════════════════════╣\n";
-        cout << "║  1. Cadastrar Aluno                  ║\n";
-        cout << "║  2. Listar Alunos                    ║\n";
-        cout << "║  3. Buscar Aluno por ID              ║\n";
-        cout << "║  4. Remover Aluno                    ║\n";
-        cout << "║  0. Voltar ao Menu Principal         ║\n";
-        cout << "╚══════════════════════════════════════╝\n";
+        cout << "\n========================================\n";
+        cout << "|           GERENCIAR ALUNOS             |\n";
+        cout << "|========================================|\n";
+        cout << "|  1. Cadastrar Aluno                    |\n";
+        cout << "|  2. Listar Alunos                      |\n";
+        cout << "|  3. Buscar Aluno por ID                |\n";
+        cout << "|  4. Remover Aluno                      |\n";
+        cout << "|  0. Voltar ao Menu Principal           |\n";
+        cout << "==========================================\n";
         cout << "Escolha: ";
         cin >> opcao;
         limparBuffer();
@@ -459,15 +448,15 @@ void menuAlunos() {
 void menuExercicios() {
     int opcao;
     do {
-        cout << "\n╔══════════════════════════════════════╗\n";
-        cout << "║       GERENCIAR EXERCÍCIOS          ║\n";
-        cout << "╠══════════════════════════════════════╣\n";
-        cout << "║  1. Cadastrar Exercício             ║\n";
-        cout << "║  2. Listar Exercícios               ║\n";
-        cout << "║  3. Buscar Exercício por ID         ║\n";
-        cout << "║  4. Remover Exercício               ║\n";
-        cout << "║  0. Voltar ao Menu Principal        ║\n";
-        cout << "╚══════════════════════════════════════╝\n";
+        cout << "\n========================================\n";
+        cout << "|          GERENCIAR EXERCÍCIOS          |\n";
+        cout << "|========================================|\n";
+        cout << "|  1. Cadastrar Exercício                |\n";
+        cout << "|  2. Listar Exercícios                  |\n";
+        cout << "|  3. Buscar Exercício por ID            |\n";
+        cout << "|  4. Remover Exercício                  |\n";
+        cout << "|  0. Voltar ao Menu Principal           |\n";
+        cout << "==========================================\n";
         cout << "Escolha: ";
         cin >> opcao;
         limparBuffer();
@@ -487,15 +476,15 @@ void menuExercicios() {
 void menuFichas() {
     int opcao;
     do {
-        cout << "\n╔══════════════════════════════════════╗\n";
-        cout << "║         GERENCIAR FICHAS            ║\n";
-        cout << "╠══════════════════════════════════════╣\n";
-        cout << "║  1. Criar Ficha                     ║\n";
-        cout << "║  2. Listar Fichas                   ║\n";
-        cout << "║  3. Buscar Ficha por ID             ║\n";
-        cout << "║  4. Remover Ficha                   ║\n";
-        cout << "║  0. Voltar ao Menu Principal        ║\n";
-        cout << "╚══════════════════════════════════════╝\n";
+        cout << "\n========================================\n";
+        cout << "|            GERENCIAR FICHAS            |\n";
+        cout << "|========================================|\n";
+        cout << "|  1. Criar Ficha                        |\n";
+        cout << "|  2. Listar Fichas                      |\n";
+        cout << "|  3. Buscar Ficha por ID                |\n";
+        cout << "|  4. Remover Ficha                      |\n";
+        cout << "|  0. Voltar ao Menu Principal           |\n";
+        cout << "==========================================\n";
         cout << "Escolha: ";
         cin >> opcao;
         limparBuffer();
@@ -515,13 +504,13 @@ void menuFichas() {
 void menuAssociacoes() {
     int opcao;
     do {
-        cout << "\n╔══════════════════════════════════════╗\n";
-        cout << "║          ASSOCIAÇÕES                ║\n";
-        cout << "╠══════════════════════════════════════╣\n";
-        cout << "║  1. Associar Ficha a Aluno          ║\n";
-        cout << "║  2. Remover Ficha de Aluno          ║\n";
-        cout << "║  0. Voltar ao Menu Principal        ║\n";
-        cout << "╚══════════════════════════════════════╝\n";
+        cout << "\n========================================\n";
+        cout << "|          ASSOCIAÇÕES                   |\n";
+        cout << "|========================================|\n";
+        cout << "|  1. Associar Ficha a Aluno             |\n";
+        cout << "|  2. Remover Ficha de Aluno             |\n";
+        cout << "|  0. Voltar ao Menu Principal           |\n";
+        cout << "==========================================\n";
         cout << "Escolha: ";
         cin >> opcao;
         limparBuffer();
@@ -539,13 +528,13 @@ void menuAssociacoes() {
 void menuRelatorios() {
     int opcao;
     do {
-        cout << "\n╔══════════════════════════════════════╗\n";
-        cout << "║            RELATÓRIOS               ║\n";
-        cout << "╠══════════════════════════════════════╣\n";
-        cout << "║  1. Relatório Completo              ║\n";
-        cout << "║  2. Estatísticas                    ║\n";
-        cout << "║  0. Voltar ao Menu Principal        ║\n";
-        cout << "╚══════════════════════════════════════╝\n";
+        cout << "\n========================================\n";
+        cout << "|               RELATÓRIOS               |\n";
+        cout << "|========================================|\n";
+        cout << "|  1. Relatório Completo                 |\n";
+        cout << "|  2. Estatísticas                       |\n";
+        cout << "|  0. Voltar ao Menu Principal           |\n";
+        cout << "==========================================\n";
         cout << "Escolha: ";
         cin >> opcao;
         limparBuffer();
@@ -607,9 +596,7 @@ void menuRelatorios() {
     } while (opcao != 0);
 }
 
-// ============================================
 // DADOS INICIAIS (PARA TESTES)
-// ============================================
 
 void carregarDadosIniciais() {
     cout << "Carregando dados iniciais para testes...\n";
