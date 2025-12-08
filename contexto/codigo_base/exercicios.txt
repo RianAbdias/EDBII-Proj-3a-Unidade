@@ -1,0 +1,6 @@
+1;1;esteira;20;3.5;1
+1;2;bike;20;5;1
+2;3;supino reto;30;4;10;90;1
+2;4;supino inclinado;30;4;10;90;1
+2;5;voador maquina;45;3;12;90;1
+1;6;tiro de 200;30;13;0
