@@ -402,7 +402,19 @@ void removerFichaAluno() {
     }
 }
 
-// MENU PRINCIPAL
+//MENU PRINCIPAL
+
+void mostrarEstruturaArvoreAlunos() {
+    cout << "\n=== ESTRUTURA DA ÁRVORE DE ALUNOS ===\n";
+
+    if (arvoreAlunos.estaVazia()) {
+        cout << "A árvore está vazia.\n";
+        return;
+    }
+
+    arvoreAlunos.exibirEstrutura(); 
+}
+
 
 void mostrarMenuPrincipal() {
     cout << "\n========================================\n";
@@ -428,6 +440,7 @@ void menuAlunos() {
         cout << "|  2. Listar Alunos                     |\n";
         cout << "|  3. Buscar Aluno por ID               |\n";
         cout << "|  4. Remover Aluno                     |\n";
+        cout << "|  5. Mostrar Estrutura da Árvore       |\n";  // ★ NOVO
         cout << "|  0. Voltar ao Menu Principal          |\n";
         cout << "========================================\n";
         cout << "Escolha: ";
@@ -439,6 +452,7 @@ void menuAlunos() {
             case 2: listarAlunos(); break;
             case 3: buscarAluno(); break;
             case 4: removerAluno(); break;
+            case 5: mostrarEstruturaArvoreAlunos(); break; 
             case 0: cout << "Voltando...\n"; break;
             default: cout << "Opção inválida!\n";
         }

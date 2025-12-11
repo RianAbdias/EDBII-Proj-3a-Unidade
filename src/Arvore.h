@@ -18,6 +18,36 @@ struct NoAVL {
 template <typename T>
 class Arvore {
 private:
+
+void imprimirRec(NoAVL<T>* no, int nivel) const {
+    if (!no) return;
+
+    for (int i = 0; i < nivel; i++)
+        std::cout << "   ";
+
+    std::cout << "- " << no->objeto->getId()
+              << " (h=" << no->altura << ")" << std::endl;
+
+    imprimirRec(no->esquerda, nivel + 1);
+    imprimirRec(no->direita, nivel + 1);
+}
+
+void imprimirBonitaRec(NoAVL<T>* no, int espaco) const {
+    if (!no) return;
+
+    const int incremento = 6;
+    espaco += incremento;
+
+    imprimirBonitaRec(no->direita, espaco);
+
+    std::cout << std::endl;
+    for (int i = incremento; i < espaco; i++)
+        std::cout << " ";
+    std::cout << no->objeto->getId() << "\n";
+
+    imprimirBonitaRec(no->esquerda, espaco);
+}
+
     NoAVL<T>* raiz;
     
     // Métodos internos
@@ -178,6 +208,23 @@ public:
     ~Arvore() {
         destruir(raiz);
     }
+
+    void exibirEstrutura() const {
+    if (!raiz) {
+        std::cout << "[Árvore vazia]\n";
+        return;
+    }
+    imprimirRec(raiz, 0);
+}
+
+void exibirBonita() const {
+    if (!raiz) {
+        std::cout << "[Árvore vazia]\n";
+        return;
+    }
+    imprimirBonitaRec(raiz, 0);
+}
+
     
     void inserir(T* objeto) {
         raiz = inserir(raiz, objeto);
